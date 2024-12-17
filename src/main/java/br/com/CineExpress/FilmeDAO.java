@@ -6,7 +6,12 @@ import javax.persistence.Persistence;
 import java.util.List;
 import br.com.CineExpress.Filme;
 
+
 public class FilmeDAO {
+	private EntityManager em;
+
+	public FilmeDAO(EntityManager em) {
+	this.em = em;
     EntityManagerFactory emf = Persistence.createEntityManagerFactory("filmesSeriesPU");
     EntityManager em = emf.createEntityManager();
     
